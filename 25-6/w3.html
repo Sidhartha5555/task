@@ -7,342 +7,283 @@
     <link rel="shortcut icon" href="./symbol.png">
     <style>
         button{
-            width: 150px;
-            height: 40px;
-            background-color: rgb(30, 29, 29);
+            background-color: black;
             color: white;
-            border-radius: 15px;
+            width: 130px;
+            height:40px;
+            border-radius: 10px;
             transition-duration: 0.5s;
         }
         button:hover{
             color: black;
             background-color: white;
-            box-shadow: 5px 5px 5px black;
+            box-shadow: 10px 10px 5px black;
         }
-        div.php{
-            text-align: center;
+        .php,.jquery,.java,.cpp,.w3css,.Bootstrap{
             border: 2px solid black;
-            width: 43%;
-            height: 200px;
-            border-color: black;
-            border-radius: 15px;
-            background-color: pink;
-            padding: 10px;
-            margin: 40px;
+            width: 40%;
+            height: 180px;
+            padding: 15px;
+            margin: 25px;
+            border-radius: 10px;
             display: inline-block;
         }
-        .jquery{
-            text-align: center;
+        #t1{
             border: 2px solid black;
-            width: 43%;
-            height: 200px;
-            border-color: black;
-            border-radius: 15px;
-            background-color: rgb(237, 233, 129);
-            padding: 10px;
-            margin: 40px;
+            width: 40%;
+            height: 80px;
+            padding: 15px;
+            margin: 25px;
+            border-radius: 10px;
             display: inline-block;
+            transition-duration: 0.5s;
         }
-        .java{
-            text-align: center;
+        #id1{
             border: 2px solid black;
-            width: 43%;
-            height: 200px;
-            border-color: black;
-            border-radius: 15px;
-            background-color: rgb(140, 140, 154);
-            padding: 10px;
-            margin: 40px;
-            display: inline-block;
-        }
-        .cpp{
-            text-align: center;
-            border: 2px solid black;
-            width: 43%;
-            height: 200px;
-            border-color: black;
-            border-radius: 15px;
-            background-color: rgb(17, 139, 214);
-            padding: 10px;
-            margin: 40px;
-            display: inline-block;
-        }
-        .w3css{
-            text-align: center;
-            border: 2px solid black;
-            width: 43%;
-            height: 200px;
-            border-color: black;
-            border-radius: 15px;
-            background-color: rgb(11, 241, 210);
-            padding: 10px;
-            margin: 40px;
-            display: inline-block;
-        }
-        .Bootstrap{
-            text-align: center;
-            border: 2px solid black;
-            width: 43%;
-            height: 200px;
-            border-color: black;
-            border-radius: 15px;
+            width: 17%;
+            height: 80px;
+            padding: 15px;
+            margin: 25px;
+            border-radius: 10px;
             background-color: rgb(224, 238, 223);
-            padding: 10px;
-            margin: 40px;
-            display: inline-block;
-        }
-        .C,.Excel,.AI{
-            text-align: center;
-            border: 2px solid black;
-            width: 43%;
-            height: 80px;
-            border-color: black;
-            border-radius: 15px;
-            background-color: rgb(241, 142, 29);
-            padding: 10px;
-            margin: 40px;
             display: inline-block;
             transition-duration: 0.5s;
         }
-        .Chash,.DSA,.ML{
-            text-align: center;
-            border: 2px solid black;
-            width: 43%;
-            height: 80px;
-            border-color: black;
-            border-radius: 15px;
-            background-color: rgb(237, 233, 129);
-            padding: 10px;
-            margin: 40px;
-            display: inline-block;
-            transition-duration: 0.5s;
-        }
-        .R,.Canvas,.Sass,.RWD{
-            text-align: center;
-            border: 2px solid black;
-            width: 18%;
-            height: 80px;
-            border-color: black;
-            border-radius: 15px;
-            background-color: pink;
-            padding: 10px;
-            margin: 40px;
-            display: inline-block;
-            transition-duration: 0.5s;
-        }
-        .Kotlin,.Icons,.Json,.Mysql,.SVG,.Rasberrypi,.Pandas,.ASP,.Git,.Go,.MongoDB,.Datascience,.CodeGame{
-            text-align: center;
-            border: 2px solid black;
-            width: 18%;
-            height: 80px;
-            border-color: black;
-            border-radius: 15px;
-            background-color: rgb(172, 243, 78);
-            padding: 10px;
-            margin: 40px;
-            display: inline-block;
-            transition-duration: 0.5s;
-        }
-        .nodejs,.Vue,.Colors,.Metplotlib,.Scipy,.AppML,.Typescript,.Statistics,.HowTo,.Spaces{
-            text-align: center;
-            border: 2px solid black;
-            width: 18%;
-            height: 80px;
-            border-color: black;
-            border-radius: 15px;
-            background-color: pink;
-            padding: 10px;
-            margin: 40px;
-            display: inline-block;
-            transition-duration: 0.5s;
-        }
-        .React,.Graphics,.Numpy,.Django,.PostgreSQL{
-            text-align: center;
+        #id2{
             border: 2px solid black;
             width: 17%;
             height: 80px;
-            border-color: black;
-            border-radius: 15px;
-            background-color: rgb(172, 243, 78);
-            padding: 10px;
-            margin: 40px;
+            padding: 15px;
+            margin: 25px;
+            border-radius: 10px;
+            background-color: rgb(113, 200, 107);
             display: inline-block;
             transition-duration: 0.5s;
         }
-        .XML,.CyberSecurity,.AngularJS,.TypingSpeed{
-            text-align: center;
+        #id3{
             border: 2px solid black;
             width: 17%;
             height: 80px;
-            border-color: black;
-            border-radius: 15px;
-            background-color: pink;
-            padding: 10px;
-            margin: 40px;
+            padding: 15px;
+            margin: 25px;
+            border-radius: 10px;
+            background-color: rgb(143, 104, 177);
             display: inline-block;
             transition-duration: 0.5s;
         }
-        .C:hover,.Excel:hover,.AI:hover,.Chash:hover,.DSA:hover,.ML:hover,.R:hover,.Canvas:hover,.Sass:hover,.RWD:hover,.Kotlin:hover,.Icons:hover,.Json:hover,.Mysql:hover,.SVG:hover,.Rasberrypi:hover,.Pandas:hover,.ASP:hover,.Git:hover,.Go:hover,.MongoDB:hover,.Datascience:hover,.CodeGame:hover,.nodejs:hover,.Vue:hover,.Colors:hover,.Metplotlib:hover,.Scipy:hover,.AppML:hover,.Typescript:hover,.Statistics:hover,.HowTo:hover,.Spaces:hover,.XML:hover,.CyberSecurity:hover,.AngularJS:hover,.TypingSpeed:hover,.React:hover,.Graphics:hover,.Numpy:hover,.Django:hover,.PostgreSQL:hover{
+        #id4{
+            border: 2px solid black;
+            width: 17%;
+            height: 80px;
+            padding: 15px;
+            margin: 25px;
+            border-radius: 10px;
+            background-color: rgb(238, 140, 132);
+            display: inline-block;
+            transition-duration: 0.5s;
+        }
+        #id5{
+            border: 2px solid black;
+            width: 17%;
+            height: 80px;
+            padding: 15px;
+            margin: 25px;
+            border-radius: 10px;
+            background-color: rgb(20, 218, 152);
+            display: inline-block;
+            transition-duration: 0.5s;
+        }
+        #t1:hover{
+            color: black;
+            background-color: white;
+            box-shadow: 10px 10px 5px white;
+        }
+        #id1:hover{
+            color:rgb(224, 238, 223);
+            background-color: rgb(30, 29, 29);
+            box-shadow: 10px 10px 5px white;
+        }
+        #id2:hover{
+            color: rgb(113, 200, 107);
+            background-color: rgb(30, 29, 29);
+            box-shadow: 10px 10px 5px white;
+        }
+        #id3:hover{
+            color: rgb(143, 104, 177);
+            background-color: rgb(30, 29, 29);
+            box-shadow: 10px 10px 5px white;
+        }
+        #id4:hover{
+            color: rgb(238, 140, 132);
+            background-color: rgb(30, 29, 29);
+            box-shadow: 10px 10px 5px white;
+        }
+        #id5:hover{
+            color: rgb(20, 218, 152);
+            background-color: rgb(30, 29, 29);
             box-shadow: 10px 10px 5px white;
         }
     </style>
 </head>
-<body style="background-color: rgb(30, 29, 29);"><center>
-    <div class="php">
-        <h1>PHP</h1>
-        <p>A web server programming language</p><br>
-        <button>php</button>
-    </div>
-    <div class="jquery">
-        <h1>jQuery</h1>
-        <p>A JS library for developing web pages</p><br>
-        <button>jQuery</button>
-    </div>
-    <div class="java">
-        <h1>Java</h1>
-        <p>A programming language</p><br>
-        <button>Java</button>
-    </div>
-    <div class="cpp">
-        <h1>C++</h1>
-        <p>A programming language</p><br>
-        <button>C++</button>
-    </div>
-    <div class="w3css">
-        <h1>W3.CSS</h1>
-        <p>A CSS framework for faster and better responsive web pages</p><br>
-        <button>W3.CSS</button>
-    </div>
-    <div class="Bootstrap">
-        <h1>Bootstrap</h1>
-        <p>A CSS framework for designing better web pages</p><br>
-        <button>Bootstrap</button>
-    </div>
-    <div class="C">
-        <h1>C</h1>
-    </div>
-    <div class="Chash">
-        <h1>C#</h1>
-    </div>
-    <div class="R">
-        <h1>R</h1>
-    </div>
-    <div class="Kotlin">
-        <h1>Kotlin</h1>
-    </div>
-    <div class="nodejs">
-        <h1>Node.js</h1>
-    </div>
-    <div class="React">
-        <h1>React</h1>
-    </div>
-    <div class="Json">
-        <h1>Json</h1>
-    </div>
-    <div class="Vue">
-        <h1>Vue</h1>
-    </div>
-    <div class="Mysql">
-        <h1>Mysql</h1>
-    </div>
-    <div class="XML">
-        <h1>XML</h1>
-    </div>
-    <div class="Sass">
-        <h1>Sass</h1>
-    </div>
-    <div class="Icons">
-        <h1>Icons</h1>
-    </div>
-    <div class="RWD">
-        <h1>RWD</h1>
-    </div>
-    <div class="Graphics">
-        <h1>Graphics</h1>
-    </div>
-    <div class="SVG">
-        <h1>SVG</h1>
-    </div>
-    <div class="Canvas">
-        <h1>Canvas</h1>
-    </div>
-    <div class="Rasberrypi">
-        <h1>Rasberrypi</h1>
-    </div>
-    <div class="CyberSecurity">
-        <h1>Cyber Security</h1>
-    </div>
-    <div class="Colors">
-        <h1>Colors</h1>
-    </div>
-    <div class="Git">
-        <h1>Git</h1>
-    </div>
-    <div class="Metplotlib">
-        <h1>Metplotlib</h1>
-    </div>
-    <div class="Numpy">
-        <h1>Numpy</h1>
-    </div>
-    <div class="Pandas">
-        <h1>Pandas</h1>
-    </div>
-    <div class="Scipy">
-        <h1>SciPy</h1>
-    </div>
-    <div class="ASP">
-        <h1>ASP</h1>
-    </div>
-    <div class="AngularJS">
-        <h1>AngularJS</h1>
-    </div>
-    <div class="AppML">
-        <h1>AppML</h1>
-    </div>
-    <div class="Go">
-        <h1>Go</h1>
-    </div>
-    <div class="Typescript">
-        <h1>Typescript</h1>
-    </div>
-    <div class="Django">
-        <h1>Django</h1>
-    </div>
-    <div class="MongoDB">
-        <h1>MongoDB</h1>
-    </div>
-    <div class="Statistics">
-        <h1>Statistics</h1>
-    </div>
-    <div class="Datascience">
-        <h1>Datascience</h1>
-    </div>
-    <div class="TypingSpeed">
-        <h1>TypingSpeed</h1>
-    </div>
-    <div class="HowTo">
-        <h1>HowTo</h1>
-    </div>
-    <div class="CodeGame">
-        <h1>Code Game</h1>
-    </div>
-    <div class="Spaces">
-        <h1>Spaces</h1>
-    </div>
-    <div class="PostgreSQL">
-        <h1>PostgreSQL</h1>
-    </div>
-    <div class="Excel">
-        <h1>Excel</h1>
-    </div>
-    <div class="DSA">
-        <h1>DSA-Data Structures and Algorithms</h1>
-    </div>
-    <div class="ML">
-        <h1>Machine-Learning</h1>
-    </div>
-    <div class="AI">
-        <h1>Artificial Intelligence</h1>
-    </div></center>
+<body style="background-color: rgb(30, 29, 29);">
+    <center>
+        <div class="php" style="background-color: pink;">
+            <h1>PHP</h1>
+            <p>A web server programming language</p><br>
+            <button>php</button>
+        </div>
+        <div class="jquery" style="background-color: rgb(237, 233, 129);">
+            <h1>jQuery</h1>
+            <p>A JS library for developing web pages</p><br>
+            <button>jQuery</button>
+        </div>
+        <div class="java" style="background-color: rgb(140, 140, 154);">
+            <h1>Java</h1>
+            <p>A programming language</p><br>
+            <button>Java</button>
+        </div>
+        <div class="cpp" style="background-color: rgb(17, 139, 214);">
+            <h1>C++</h1>
+            <p>A programming language</p><br>
+            <button>C++</button>
+        </div>
+        <div class="w3css" style="background-color: rgb(11, 241, 210);">
+            <h1>W3.CSS</h1>
+            <p>A CSS framework for faster and better responsive web pages</p><br>
+            <button>W3.CSS</button>
+        </div>
+        <div class="Bootstrap" style="background-color: rgb(224, 238, 223);">
+            <h1>Bootstrap</h1>
+            <p>A CSS framework for designing better web pages</p><br>
+            <button>Bootstrap</button>
+        </div>
+        <div id="t1" style="background-color:rgb(17, 139, 214);">
+            <h1>C</h1>
+        </div>
+        <div id="t1" style="background-color:rgb(237, 233, 129);">
+            <h1>C#</h1>
+        </div>
+        <div id="id1">
+            <h1>R</h1>
+        </div>
+        <div id="id2">
+            <h1>Kotlin</h1>
+        </div>
+        <div id="id3">
+            <h1>Node.js</h1>
+        </div>
+        <div id="id4">
+            <h1>React</h1>
+        </div>
+        <div id="id5">
+            <h1>Json</h1>
+        </div>
+        <div id="id1">
+            <h1>Vue</h1>
+        </div>
+        <div id="id2">
+            <h1>Mysql</h1>
+        </div>
+        <div id="id3">
+            <h1>XML</h1>
+        </div>
+        <div id="id4">
+            <h1>Sass</h1>
+        </div>
+        <div id="id5">
+            <h1>Icons</h1>
+        </div>
+        <div id="id1">
+            <h1>RWD</h1>
+        </div>
+        <div id="id2">
+            <h1>Graphics</h1>
+        </div>
+        <div id="id3">
+            <h1>SVG</h1>
+        </div>
+        <div id="id4">
+            <h1>Canvas</h1>
+        </div>
+        <div id="id5">
+            <h1>Rasberrypi</h1>
+        </div>
+        <div id="id1">
+            <h1>Cyber Security</h1>
+        </div>
+        <div id="id2">
+            <h1>Colors</h1>
+        </div>
+        <div id="id3">
+            <h1>Git</h1>
+        </div>
+        <div id="id4">
+            <h1>Metplotlib</h1>
+        </div>
+        <div id="id5">
+            <h1>Numpy</h1>
+        </div>
+        <div id="id1">
+            <h1>Pandas</h1>
+        </div>
+        <div id="id2">
+            <h1>SciPy</h1>
+        </div>
+        <div id="id3">
+            <h1>ASP</h1>
+        </div>
+        <div id="id4">
+            <h1>AngularJS</h1>
+        </div>
+        <div id="id5">
+            <h1>AppML</h1>
+        </div>
+        <div id="id1">
+            <h1>Go</h1>
+        </div>
+        <div id="id2">
+            <h1>Typescript</h1>
+        </div>
+        <div id="id3">
+            <h1>Django</h1>
+        </div>
+        <div id="id4">
+            <h1>MongoDB</h1>
+        </div>
+        <div id="id5">
+            <h1>Statistics</h1>
+        </div>
+        <div id="id1">
+            <h1>Datascience</h1>
+        </div>
+        <div id="id2">
+            <h1>TypingSpeed</h1>
+        </div>
+        <div id="id3">
+            <h1>HowTo</h1>
+        </div>
+        <div id="id4">
+            <h1>Code Game</h1>
+        </div>
+        <div id="id5">
+            <h1>Spaces</h1>
+        </div>
+        <div id="id1">
+            <h1>PostgreSQL</h1>
+        </div>
+        <div id="t1" style="background-color:rgb(17, 139, 214);">
+            <h1>C</h1>
+        </div>
+        <div id="t1" style="background-color:rgb(237, 233, 129);">
+            <h1>C#</h1>
+        </div>
+        <div id="t1" style="background-color:rgb(251, 116, 226);">
+            <h1>C</h1>
+        </div>
+        <div id="t1" style="background-color:rgb(242, 162, 25);">
+            <h1>C#</h1>
+        </div>
+    </center>
+    
 </body>
 </html>
