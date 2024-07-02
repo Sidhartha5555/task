@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="shortcut icon" href="./symbol.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton+SC&family=Black+Ops+One&family=Caveat:wght@400..700&family=Cinzel:wght@400..900&family=Dancing+Script:wght@400..700&family=Dosis:wght@200..800&family=Indie+Flower&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Kalam:wght@300;400;700&family=Lobster&family=Margarine&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Oswald:wght@200..700&family=Pacifico&family=Play:wght@400;700&family=Playwrite+IT+Moderna:wght@100..400&family=Satisfy&family=Teko:wght@300..700&family=Tiny5&family=Wittgenstein:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <style>
+        div{
+            border: 2px solid black;
+            width: 20%;
+            height: 100px;
+            padding: 15px;
+            margin: 25px;
+            border-radius: 10px;
+            display: inline-block;
+        }
+        #f1,#f2,#f3,#f4,#f5,#f6,#f7,#f8,#f9,#f10,#f11,#f12,#f13,#f14,#f15,#f16,#f17,#f18,#f19,#f20{
+            box-shadow: 4px 4px 10px black inset;
+            transition-duration: 0.5s;
+        }
+        #f1{
+            color:white;
+            background-color: red;
+        }
+        #f2{
+            background-color: cyan;
+        }
+        #f3{
+            background-color: rgb(255, 221, 0);
+        }
+        #f4{
+            background-color: rgb(0, 255, 17);
+            transition-duration: 0.5s;
+        }
+        #f5{
+            background-color: rgb(0, 149, 255);
+            transition-duration: 0.5s;
+        }
+        #f6{
+            background-color: rgb(238, 0, 255);
+            transition-duration: 0.5s;
+        }
+        #f7{
+            color:white;
+            background-color: rgb(255, 0, 115);
+            transition-duration: 0.5s;
+        }
+        #f8{
+            background-color: rgb(0, 255, 238);
+            transition-duration: 0.5s;
+        }
+        #f9{    
+            color:white;
+            background-color: rgb(255, 140, 0);
+            transition-duration: 0.5s;
+        }
+        #f10{
+            background-color: rgb(0, 255, 0);
+            transition-duration: 0.5s;
+        }
+        #f11{
+            color:white;
+            background-color: rgb(0, 106, 255);
+            transition-duration: 0.5s;
+        }
+        #f12{
+            color:white;
+            background-color: rgb(255, 0, 0);
+            transition-duration: 0.5s;
+        }
+        #f13{
+            background-color: rgb(251, 255, 0);
+            transition-duration: 0.5s;
+        }
+        #f14{
+            color:white;
+            background-color: rgb(96, 37, 37);
+            transition-duration: 0.5s;
+        }
+        #f15{
+            background-color: rgb(99, 251, 109);
+            transition-duration: 0.5s;
+        }
+        #f16{
+            background-color: rgb(187, 140, 249);
+            transition-duration: 0.5s;
+        }
+        #f17{
+            color:white;
+            background-color: rgb(50, 32, 48);
+            transition-duration: 0.5s;
+        }
+        #f18{
+            color:white;
+            background-color: rgb(218, 120, 128);
+            transition-duration: 0.5s;
+        }
+        #f19{
+            background-color: rgb(253, 170, 3);
+            transition-duration: 0.5s;
+        }
+        #f20{
+            color:white;
+            background-color: red;
+            transition-duration: 0.5s;
+        }
+        #f1:hover,#f2:hover,#f3:hover,#f4:hover,#f5:hover,#f6:hover,#f7:hover,#f8:hover,#f9:hover,#f10:hover,#f11:hover,#f12:hover,#f13:hover,#f14:hover,#f15:hover,#f16:hover,#f17:hover,#f18:hover,#f19:hover,#f20:hover{
+            color: black;
+            background-color: white;
+            box-shadow: 10px 10px 10px black;
+        }
+        #f1:hover{
+            font-style: italic;
+        }
+        #f2:hover{
+            font-family: "Anton SC", sans-serif;
+        }
+        #f3:hover{
+            font-family: "Oswald", sans-serif;
+        }
+        #f4:hover{
+            font-family: "Wittgenstein", serif;
+        }
+        #f5:hover{
+            font-family: "Nunito", sans-serif;
+        }
+        #f6:hover{
+            font-family: "Teko", sans-serif;
+        }
+        #f7:hover{
+            font-family: "Josefin Sans", sans-serif;
+        }
+        #f8:hover{
+            font-family: "Dosis", sans-serif;
+        }
+        #f9:hover{
+            font-family: "Dancing Script", cursive;
+        }
+        #f10:hover{
+            font-family: "Margarine", sans-serif;
+        }
+        #f11:hover{
+            font-family: "Pacifico", cursive;
+        }
+        #f12:hover{
+            font-family: "Tiny5", sans-serif;
+        }
+        #f13:hover{
+            font-family: "Kalam", cursive;
+        }
+        #f14:hover{
+            font-family: "Lobster", sans-serif;
+        }
+        #f15:hover{
+            font-family: "Caveat", cursive;
+        }
+        #f16:hover{
+            font-family: "Play", sans-serif;
+        }
+        #f17:hover{
+            font-family: "Indie Flower", cursive;
+        }
+        #f18:hover{
+            font-family: "Satisfy", cursive;
+        }
+        #f19:hover{
+            font-family: "Cinzel", serif;
+        }
+        #f20:hover{
+            font-family: "Black Ops One", system-ui;
+        }
+    </style>
+</head>
+<body bgcolor="grey">
+    <center>
+        <div id="f1">
+            <h1>Italic</h1>
+        </div>
+        <div id="f2">
+            <h1>Anton SC</h1>
+        </div>
+        <div id="f3">
+            <h1>Oswald</h1>
+        </div>
+        <div id="f4">
+            <h1>Wittgenstein</h1>
+        </div>
+        <div id="f5">
+            <h1>Nunito</h1>
+        </div>
+        <div id="f6">
+            <h1>Teko</h1>
+        </div>
+        <div id="f7">
+            <h1>Josefin</h1>
+        </div>
+        <div id="f8">
+            <h1>Dosis</h1>
+        </div>
+        <div id="f9">
+            <h1>Dancingscript</h1>
+        </div>
+        <div id="f10">
+            <h1>Margarine</h1>
+        </div>
+        <div id="f11">
+            <h1>Pacifico</h1>
+        </div>
+        <div id="f12">
+            <h1>Tiny5</h1>
+        </div>
+        <div id="f13">
+            <h1>Kalam</h1>
+        </div>
+        <div id="f14">
+            <h1>Lobster</h1>
+        </div>
+        <div id="f15">
+            <h1>Caveat</h1>
+        </div>
+        <div id="f16">
+            <h1>Play</h1>
+        </div>
+        <div id="f17">
+            <h1>Indie Flower</h1>
+        </div>
+        <div id="f18">
+            <h1>Satisfy</h1>
+        </div>
+        <div id="f19">
+            <h1>Cinzel</h1>
+        </div>
+        <div id="f20">
+            <h1>Black Ops One</h1>
+        </div>
+    </center>
+</body>
+</html>
