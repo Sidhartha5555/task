@@ -1,0 +1,85 @@
+<!DOCTYPE html> 
+<html> 
+  
+<head> 
+    <style>
+        .b1,.b2,.b3{
+            display: inline-block;
+            width: 100px; 
+            height: 100px; 
+            border: 1px solid black;
+            border-radius: 50%; 
+            background-color: red;
+            animation-name: bounce;
+            animation-duration: 0.5s; 
+            animation-direction: alternate;
+            animation-timing-function:cubic-bezier(0.74, 0.02, 0.99, 0.9);
+            animation-iteration-count: infinite; 
+        }
+        .b1{
+            animation-delay: 0;
+        }
+        .b2{
+            animation-delay: 0.2s;
+        }
+        .b3{
+            animation-delay: 0.4s;
+        }
+        @keyframes bounce { 
+            from{ 
+                transform: translate(0, 0); 
+                background-color: pink;
+            }
+            to{ 
+                transform: translate(0, 200px);
+            }
+        }
+        #b1,#b2,#b3{
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: black;
+            animation-name: load;
+            animation-duration: 0.5s;
+            animation-direction: alternate;
+            animation-iteration-count: infinite;
+        }
+        #b1{
+            position: absolute;
+            top: 400px;
+            left: 46%;
+        }
+        #b2{
+            position: absolute;
+            top: 400px;
+            left: 49%;
+            animation-delay: 0.2s;
+        }
+        #b3{
+            position: absolute;
+            top: 400px;
+            left: 52%;
+            animation-delay: 0.4s;
+        }
+        @keyframes load{
+            from{
+                transform: scale(1);
+                background-color: white;
+            }
+            to{
+                transform: scale(3);
+            }
+        }
+    </style> 
+</head>
+<body>
+    <center>
+        <div class="b1"></div> 
+        <div class="b2"></div> 
+        <div class="b3"></div>
+        <div id="b1"></div>
+        <div id="b2"></div>
+        <div id="b3"></div>
+    </center>
+</body>
+</html> 
