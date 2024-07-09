@@ -6,7 +6,54 @@
     <title>Document</title>
     <link rel="shortcut icon" href="./symbol.png">
     <style>
-        #m1,#m2,#m3,#m4,#m5,#m6,#m7,#m8,#m9,#m10{
+        body{
+            background-image: url(./bg.jpg);
+            background-size: cover ;
+            background-position: top;
+            background-repeat: no-repeat;
+            height: 100vh;
+        }
+        .m{
+            color: white;
+            font-size: 100px;
+            position: absolute;
+            top: 70px;
+            left: 150px;
+            animation-name: m;
+            animation-duration: 10s;
+            animation-direction: forwards;
+            animation-iteration-count: infinite;
+        }
+        @keyframes m{
+            0%{
+                color: white;
+            }
+            10%{
+                color: violet;
+            }
+            25%{
+                color: indigo;
+            }
+            40%{
+                color: blue;
+            }
+            55%{
+                color: green;
+            }
+            70%{
+                color: yellow;
+            }
+            85%{
+                color: orange;
+            }
+            95%{
+                color: red;
+            }
+            100%{
+                color: white;
+            }
+        }
+        #m1,#m2,#m3,#m4,#m5,#m6,#m7,#m8,#m9,#m10,#m11,#m12,#m13,#m14{
             width: 30px;
             height: 20px;
             border: 1px solid black;
@@ -15,74 +62,76 @@
             animation-duration: 0.5s;
             animation-iteration-count: infinite;
             animation-direction: alternate;
+            position: absolute;
+            bottom: 0;
         }
         #m1{
-            position: absolute;
-            bottom: 10px;
             background-color: violet;
         }
         #m2{
-            position: absolute;
-            bottom: 10px;
             left: 45px;
-            animation-delay: 0.2s;
+            animation-delay: 0.3s;
             background-color: indigo;
         }
         #m3{
-            position: absolute;
-            bottom: 10px;
             left: 82px;
-            animation-delay: 0.4s;
+            animation-delay: 0.6s;
             background-color: blue;
         }
         #m4{
-            position: absolute;
-            bottom: 10px;
             left: 118px;
-            animation-delay: 0.6s;
+            animation-delay: 0.9s;
             background-color: green;
         }
         #m5{
-            position: absolute;
-            bottom: 10px;
             left: 155px;
-            animation-delay: 0.8s;
+            animation-delay: 0.2s;
             background-color: yellow;
         }
         #m6{
-            position: absolute;
-            bottom: 10px;
             left: 192px;
-            animation-delay: 1s;
+            animation-delay: 0.5s;
             background-color: orange;
         }
         #m7{
-            position: absolute;
-            bottom: 10px;
             left: 228px;
-            animation-delay: 0.2s;
+            animation-delay: 0.8s;
             background-color: red;
         }
         #m8{
-            position: absolute;
-            bottom: 10px;
             left: 265px;
-            animation-delay: 0.4s;
+            animation-delay: 0.1s;
             background-color: violet;
         }
         #m9{
-            position: absolute;
-            bottom: 10px;
             left: 302px;
-            animation-delay: 0.6s;
+            animation-delay: 0.4s;
             background-color: indigo;
         }
         #m10{
-            position: absolute;
-            bottom: 10px;
             left: 338px;
-            animation-delay: 0.8s;
+            animation-delay: 0.7s;
             background-color: blue;
+        }
+        #m11{
+            left: 375px;
+            animation-delay: 0s;
+            background-color: green;
+        }
+        #m12{
+            left: 412px;
+            animation-delay: 0.3s;
+            background-color: yellow;
+        }
+        #m13{
+            left: 450px;
+            animation-delay: 0.6s;
+            background-color: orange;
+        }
+        #m14{
+            left: 488px;
+            animation-delay: 0.9s;
+            background-color: red;
         }
         @keyframes music{
             from{
@@ -95,6 +144,7 @@
     </style>
 </head>
 <body>
+    <div class="m">Music</div>
     <div id="m1"></div>
     <div id="m2"></div>
     <div id="m3"></div>
@@ -105,5 +155,9 @@
     <div id="m8"></div>
     <div id="m9"></div>
     <div id="m10"></div>
+    <div id="m11"></div>
+    <div id="m12"></div>
+    <div id="m13"></div>
+    <div id="m14"></div>
 </body>
 </html>
