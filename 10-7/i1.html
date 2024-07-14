@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="shortcut icon" href="./symbol.png">
+    <style>
+        body{
+            background-color: black;
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            height: auto;
+        }
+        .main{
+            width: 80%;
+            height: auto;
+            background-color: wheat;
+            border-radius: 10px;
+            transition-duration: 0.5s;
+        }
+        .main:hover{
+            box-shadow: 1px 1px 5px 1px black inset;
+        }
+        .nav{
+            display: flex;
+            justify-content: space-between;
+            border: 1px solid black;
+            padding: 30px;
+            font-size: 20px;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .t2{
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        #t2a,#t2b,#t2c,#t2d{
+            padding-right: 30px;
+            flex-shrink: 1;
+        }
+        .down{
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            padding: 30px;
+            justify-content: space-evenly;
+        }
+        .content{
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            justify-content: space-evenly;
+            height: 60vh;
+            width: auto;
+        }
+        .image{
+            width: 325px;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            animation-name: rotate;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        }
+        button{
+            width: 100px;
+            height: 30px;
+            color: white;
+            background-color: black;
+            border-radius: 10px;
+            transition-duration: 0.5s;
+        }
+        #im1{
+            border-radius: 50%;
+        }
+        button:hover{
+            color: black;
+            background-color: white;
+            box-shadow: 10px 10px 10px black;
+        }
+        @keyframes rotate{
+            from{
+                transform: rotateY(0deg);
+            }
+            to{
+                transform: rotateY(180deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="nav">
+            <div class="t1"><i>MY <b>WEBSITE</b></i></div>
+            <div class="t2">
+                <div id="t2a">Home</div>
+                <div id="t2b">About me</div>
+                <div id="t2c">Work</div>
+                <div id="t2d">Info</div>
+                <div id="t2e"><a href=""><button>Get Started</button></a></div>
+            </div>
+        </div>
+        <div class="down">
+            <div class="content">
+                <div id="c1" style="font-size: 50px;"><b>WEBSITE <br> DESIGN</b></div>
+                <div id="c2">Iam Sidhartha, from Nizamabad. Recently, i have graduated in CMRTC (2024), Hyderabad.</div>
+                <div id="c3"><button>Button name</button></div>
+            </div>
+            <div class="image">
+                <img src="./symbol.png" id="im1" width="325px" height="300px">
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
