@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        .full{
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+            height: 102vh;
+            flex-wrap: wrap;
+            position: relative;
+            background-repeat: no-repeat;
+            background-size: cover;
+            margin: -8px;
+        }
+        .leftside{
+            flex-direction: column;
+            width: 22.5%;
+            position: fixed;
+            left: 0;
+            top: 65px;
+            bottom: 50px;
+            color: white;
+            z-index: 1;
+            background-color: rgba(17, 17, 17, 0.7);
+        }
+        .title{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 50px;
+            padding-top: 75px;
+            padding-bottom: 50px;
+            font-size: 30px;
+        }
+        #im2{
+            display: none;
+        }
+        .titles{
+            display: grid;
+        }
+        #t1,#t2,#t3,#t4,#t5{
+            display: grid;
+            height: 80px;
+            justify-content: center;
+            align-content: center;
+        }
+        #t5{
+            margin-bottom: 35%;
+        }
+        #b1,#b2,#b3,#b4,#b5{
+            width: 120px;
+            height: 40px;
+            border: none;
+            border-radius: 5px;
+            animation-name: names;
+            transition: 0.3s;
+            animation-duration: 1.5s;
+        }
+        #b1{
+            animation-delay: 0s;
+        }
+        #b2{
+            animation-delay: 0.2s;
+        }
+        #b3{
+            animation-delay: 0.4s;
+        }
+        #b4{
+            animation-delay: 0.6s;
+        }
+        #b5{
+            animation-delay: 0.8s;
+        }
+        #b1:hover,#b2:hover,#b3:hover,#b4:hover,#b5:hover{
+            transform: scale(1.3);
+        }
+        #b1:hover::after{
+            content: " Home";
+        }
+        #b2:hover::after{
+            content: " About";
+        }
+        #b3:hover::after{
+            content: " Entries";
+        }
+        #b4:hover::after{
+            content: " Work";
+        }
+        #b5:hover::after{
+            content: " Contact";
+        }
+        @keyframes names{
+            from{
+                transform: scale(0);
+            }
+            to{
+                transform: scale(1);
+            }
+        }
+        .rightside{
+            width: 70%;
+            display: grid;
+            justify-content: flex-end;
+            align-content: center;
+            gap: 20px;
+            height: 85vh;
+            position: absolute;
+            top: 65px;
+            background-color: rgba(17, 17, 17, 0.7);
+            color: white;
+            /* border: 10px solid cyan; */
+            position: relative;
+            /* opacity: 50%; */
+            /* background: linear-gradient(rgba(9, 8, 8, 0.3), rgba(20, 20, 19, 0.8), url("full-template-moonlight.jpg")); */
+        }
+        .r{
+            display: flex;
+            
+            flex-direction: row;
+            justify-content: center;
+            align-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+
+        }
+        .profile{
+            display:grid;
+            justify-content: center;
+            align-content: center;
+            transition-duration: 0.2s;
+        }
+        .details{
+            /* border: 1px solid black; */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-content: center;
+            gap: 20px;
+            flex-basis: 50%;
+            opacity: 120%;
+        }
+        #butt{
+            display: flex;
+            flex-direction: row;
+            column-gap: 40px;
+        }
+        #butt1,#butt2{
+            border: 3px solid white;
+            background-color: rgba(17, 17, 17, 0.7);
+            color: white;
+            width: 90px;
+            height: 40px;
+            transition-duration: 0.5s;
+        }
+        #butt1:hover,#butt2:hover{
+            background-color: white;
+            color: black;
+        }
+        /*
+        .rightside1{
+            width: 70%;
+            display: grid;
+            justify-content: flex-end;
+            align-content: center;
+            gap: 20px;
+            height: 85vh;
+            position: absolute;
+            top: 760px;
+        }
+            */
+        @media screen and (width<1000){
+            .title{
+                background-image: url(./img&sym/mini_logo.png);
+            }
+        }
+        @media screen and (max-width:920px){
+            #im1{
+                display: none;
+            }
+            #im2{
+                display: block;
+            }
+        }
+        @media screen and (max-height:725px){
+            .title{
+                padding: 15px;
+            }
+        }
+        @media screen and (max-width:570px){
+            #b1,#b2,#b3,#b4,#b5{
+                width: 50px;
+            }
+        }
+        @media screen and (max-height:625px){
+            #t1,#t2,#t3,#t4,#t5{
+                height: 60px;
+            }
+        }
+        @media screen and (max-height:590px){
+            .profile{
+                transform: scale(0.8);
+            }
+            .details{
+                transform: scale(0.8);
+            }
+        }
+        @media screen and (max-width:350px){
+            .details{
+                width: 60px;
+                font-size: 6px;
+                transform: translateX(-50px);
+            }
+        }
+        .r1{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            /* border: 1px solid yellow; */
+            height: 85vh;
+        }
+        .about{
+            padding: 20px;
+            width: 50%;
+            height: 85vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            /* border: 2px solid red; */
+        }
+        .abtpic{
+            width: 50%;
+            height: 85vh;
+            /* border: 1px solid red; */
+        }
+        #aboutimg{
+            width: 100%;
+            height: 100%;
+            /* border: 2px solid blue; */
+        }
+        @media screen and (max-width:660px){
+            .r1{
+                display:flex;
+                flex-direction:column
+            }
+            .about{
+                width: 100%;
+                height: 100%;
+            }
+            .abtpic{
+                display: none;
+                width: 100%;
+                height: 200px;
+            }
+            #aboutimg{
+                width: 100%;
+                height: 100%;
+            }
+        }
+        @media screen and (max-width:450px){
+            .about{
+                font-size: 6px;
+            }
+        }
+        .r2{
+            /* border: 1px solid yellow; */
+            height: 85vh;
+        }
+        .p1{
+            display: flex;
+            flex-direction: row;
+            height: 42.5vh;
+            /* border: 2px solid red; */
+        }
+        .p2{
+            display: flex;
+            flex-direction: row;
+            height: 42vh;
+            /* border: 1px solid red; */
+        }
+        /* #p1a{
+            border: 2px solid red;
+        }
+        #p1b{
+            border: 2px solid red;
+        }
+        #p2a{
+            border: 2px solid red;
+        }
+        #p2b{
+            border: 2px solid red;
+        } */
+        #p1a,#p1b,#p2a,#p2b{
+            margin: 20px;
+        }
+        
+        #butt3,#butt4{
+            border: 3px solid white;
+            background-color: rgba(17, 17, 17, 0.7);
+            color: white;
+            width: 140px;
+            height: 40px;
+            transition-duration: 0.5s;
+        }
+        #butt3:hover,#butt4:hover{
+            background-color: white;
+            color: black;
+        }
+        @media screen and (max-width:1154px){
+            #p1a{
+                display: block;
+            }
+            #p1b{
+                display: none;
+            }
+            #p2b{
+                display: block;
+            }
+            #p2a{
+                display: none;
+            }
+        }
+        @media screen and (max-width:600px){
+            #p1a,#p2b{
+                font-size: 10px;
+            }
+        }
+        .r3{
+            /* border: 5px solid red; */
+            height: 85vh;
+            width: 100%;
+            position: absolute;
+            left: 0px;
+        }
+        .l1,.l2,.l3{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            /* border: 1px solid red; */
+        }
+        
+        .l1a,.l1b,.l1c,.l2a,.l2b,.l2c,.l3a,.l3b,.l3c{
+            height: 27vh;
+            width: 100%;
+            padding: 10px;
+        }
+
+        #l1a,#l1b,#l1c,#l2a,#l2b,#l2c,#l3a,#l3b,#l3c{
+            /* border: 2px solid yellow; */
+            height: 100%;
+            width: 100%;
+        }
+        @media screen and (max-width:768px){
+            .l1{
+                grid-template-columns: 1fr 1fr;
+                height: 27vh;
+            }
+            #l1c{
+                display: none;
+            }
+            .l2{
+                grid-template-columns: 1fr 1fr;
+                height: 27vh;
+            }
+            #l2c{
+                display: none;
+            }
+            .l3{
+                grid-template-columns: 1fr 1fr;
+                height: 27vh;
+            }
+            #l3c{
+                display: none;
+            }
+        }
+        @media screen and (max-width:576px){
+            .l1{
+                grid-template-columns: 1fr;
+            }
+            #l1b{
+                display: none;
+            }
+            .l2{
+                grid-template-columns: 1fr;
+            }
+            #l2b{
+                display: none;
+            }
+            .l3{
+                grid-template-columns: 1fr;
+            }
+            #l3b{
+                display: none;
+            }
+        }
+        #if1{
+            position: absolute;
+            left: 20px;
+            top: 20px;
+            width: 50%;
+            /* border: 2px solid red; */
+            height: 93%;
+        }
+        #if1a{
+            height: 100%;
+            /* border: 2px solid red; */
+        }
+        #n1,#n2,#n3,#n4{
+            position: absolute;
+            left: 59%;
+            width: 36%;
+            height: 40px;
+            background-color: rgba(66, 65, 65, 0.7);
+            color: white;
+        }
+        #n1{
+            top: 30px;
+        }
+        #n2{
+            top: 90px;
+        }
+        #n3{
+            top: 150px;
+        }
+        #n4{
+            top: 210px;
+            height: 200px;
+        }
+        ::placeholder{
+            color: rgb(201, 199, 199);
+        }
+        #lastbutt{
+            border: 3px solid white;
+            background-color: rgba(17, 17, 17, 0.7);
+            color: white;
+            width: 35%;
+            height: 40px;
+            position: absolute;
+            top: 435px;
+            left: 60%;
+            transition-duration: 0.5s;
+        }
+        #lastbutt:hover{
+            background-color: white;
+            color: black;
+        }
+        /* #if2{
+            border: 2px solid red;
+        } */
+        @media screen and (max-width:570px){
+            .r4{
+                display: flex;
+                flex-direction: column;
+            }
+            #if1{
+                width: 90%;
+                height: 35%;
+                display: block;
+            }
+            #n1,#n2,#n3,#n4{
+                left: 20px;
+                height: 45px;
+                width: 90%;
+                
+            }
+            #n1{
+                top: 42%;
+            }
+            #n2{
+                top: 51%;
+            }
+            #n3{
+                top: 60%;
+            }
+            #n4{
+                top: 69%;
+                height: 90px;
+            }
+            #lastbutt{
+                left: 20px;
+                top: 87%;
+            }
+        }
+        @media screen and (max-height:650px){
+            #n1,#n2,#n3,#n4{
+                height: 30px;
+            }
+            #lastbutt{
+                top: 80%;
+            }
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="full" style="background-image: url(./img&sym/first_bg.jpg);">
+        <div class="leftside">
+            <div class="title">
+                <img src="./img&sym/logo.png" id="im1">
+                <img src="./img&sym/mini_logo.png" id="im2">
+            </div><hr>
+            <div class="titles">
+                <div id="t1"><a href=""><button id="b1"><i class="fa-solid fa-house"></i></button></a></div>
+                <div id="t2"><a href=""><button id="b2"><i class="fa-solid fa-user"></i></button></a></div>
+                <div id="t3"><a href=""><button id="b3"><i class="fa-solid fa-pen"></i></button></a></div>
+                <div id="t4"><a href=""><button id="b4"><i class="fa-solid fa-image"></i></button></a></div>
+                <div id="t5"><a href=""><button id="b5"><i class="fa-solid fa-envelope"></i></button></a></div>
+            </div>
+        </div>
+        <div class="rightside">
+            <div class="r">
+                <div class="profile">
+                    <img src="./img&sym/author_image.png">
+                </div>
+                <div class="details">
+                    <div id="name" style="font-size: 40px;"><u>Sidhartha</u></div>
+                    <div id="des">Iam Sidhartha from Nizamabad, I have recently completed my graduated in CMR Technical Campus (2024) Hyderabad.jbvjsnkjbvsbvbsdbvjs vcjnskv jsd vjbsidbv</div>
+                    <div id="butt">
+                        <div><button id="butt1">read more</button></div>
+                        <div><button id="butt2">our fb page</button></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="full" style="background-image: url(./img&sym/second_bg.jpg);">
+        <div class="rightside">
+            <div class="r1">
+                <div class="about">
+                    <div id="a" style="font-size: 40px;"><u>ABOUT US</u></div>
+                    <div id="abt">
+                        <p style="font-size: 15px;">Please tell your friends about templatemo website. A variety of free CSS templates are available for immediate downloads.</p>
+                        <p style="font-size: 15px;">vitae faucibus orci. Etiam eleifend orci sed faucibus semper. Cras varius dolor et augue fringilla, eu commodo sapien iaculis. Donec eget dictum tellus. Curabitur a interdum diam. Nulla vestibulum porttitor porta.</p>
+                        <p style="font-size: 15px;">Nulla vitae interdum libero, vel posuere ipsum. Phasellus interdum est et dapibus tempus. Vestibulum malesuada lorem condimentum mauris ornare dapibus. Curabitur tempor ligula et placerat molestie.</p>
+                        <p style="font-size: 15px;">Aliquam efficitur eu purus in interdum. Etiam tincidunt magna ex, sit amet lobortis felis bibendum id. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                    <div>
+                        <div><button id="butt1">Read More</button></div>
+                    </div>
+                </div>
+                <div class="abtpic">
+                    <img src="./img&sym/about_image.jpg" id="aboutimg">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="full" style="background-image: url(./img&sym/third_bg.jpg);">
+        <div class="rightside">
+            <div class="r2">
+                <div class="p1">
+                    <div id="p1a">
+                        <div id="name" style="font-size: 30px;"><u>QUISQUE COMMODO QUAM</u></div>
+                        <p>Vestibulum augue ex, finibus sit amet nisi id, maximus ultrices ipsum. Maecenas rhoncus nibh in mauris lobortis, a maximus diam faucibus. In et eros urna. Suspendisse potenti. Pellentesque commodo, neque nec molestie tempus, purus ante feugiat augue.</p>
+                        <button id="butt3">Continue Reading</button>
+                    </div>
+                    <div id="p1b">
+                        <img src="./img&sym/first_service.jpg" height="250px">
+                    </div>
+                </div>
+                <div class="p2">
+                    <div id="p2a">
+                        <img src="./img&sym/second_service.jpg" height="240px">
+                    </div>
+                    <div id="p2b">
+                        <div id="name" style="font-size: 30px;"><u>MAECENAS EU PURUS EU SAPIEN</u></div>
+                        <p>Sed vitae felis in lorem mollis mollis eget in leo. Donec commodo, ex nec rutrum venenatis, nisi nisl malesuada magna, sed semper ipsum enim a ipsum. Aenean in ante vel mi molestie bibendum. Quisque sit amet lacus in diam pretium faucibus. Cras vel justo lorem</p>
+                        <button id="butt4">Continue Reading</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="full" style="background-image: url(./img&sym/fourth_bg.jpg);">
+        <div class="rightside">
+            <div class="r3">
+                <div class="l1">
+                    <div class="l1a"><img src="./img&sym/first_item.jpg" id="l1a"></div>
+                    <div class="l1b"><img src="./img&sym/second_item.jpg" id="l1b"></div>
+                    <div class="l1c"><img src="./img&sym/third_item.jpg" id="l1c"></div>
+                </div>
+                <div class="l2">
+                    <div class="l2a"><img src="./img&sym/fourth_item.jpg" id="l2a"></div>
+                    <div class="l2b"><img src="./img&sym/fifth_item.jpg" id="l2b"></div>
+                    <div class="l2c"><img src="./img&sym/sixth_item.jpg" id="l2c"></div>
+                </div>
+                <div class="l3">
+                    <div class="l3a"><img src="./img&sym/seventh_item.jpg" id="l3a"></div>
+                    <div class="l3b"><img src="./img&sym/eight_item.jpg" id="l3b"></div>
+                    <div class="l3c"><img src="./img&sym/ninth_item.jpg" id="l3c"></div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="full" style="background-image: url(./img&sym/fifth_bg.jpg);">
+        <div class="rightside">
+            <div class="r4">
+                <div id="if1">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30217.49205383288!2d78.290479!3d18.789839850000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcdbf8ed1959617%3A0x19a4e109a4d8b358!2sArmur%2C%20Telangana%20503224!5e0!3m2!1sen!2sin!4v1723900107552!5m2!1sen!2sin" width="100%" height="530px" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" id="if1a"></iframe>
+                </div>
+                <div id="if2">
+                    <form>
+                        <input type="text" id="n1" placeholder="Name:-"><br>
+                        <input type="email" id="n2" placeholder="Your email:-"><br>
+                        <input type="text" id="n3" placeholder="Subject:-"><br>
+                        <textarea rows="3" id="n4" placeholder="Your Message"></textarea><br>
+                        <button id="lastbutt">Send Now</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
