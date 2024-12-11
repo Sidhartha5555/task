@@ -1,0 +1,103 @@
+.down{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 78vh;
+    font-family: 'Arial', sans-serif;
+}
+.buttons{
+    width: 50%;
+    height: 50%;
+    text-align: center;
+    padding: 20px;
+    background-color: #f4f4f4;
+    display: grid;
+    border-radius: 10px;
+    border: 1px solid black;
+}
+#butt1,#butt2,#butt3,#butt4{
+    font-size: 25px;
+    width: 95%;
+    height: 80px;
+    border-radius: 5px;
+    border: 2px solid white;
+    background-color: #3498db;
+    color: white;
+}
+#butt1:hover,#butt2:hover,#butt3:hover,#butt4:hover{
+    transform: scale(1.05);
+    transition-duration: 0.2s;
+    background-color: #2980b9;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+.center-button {
+    display: block;
+    margin: 10px auto;
+    padding: 10px 20px;
+    font-size: 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.center-button:hover {
+    background-color: #45a049;
+}
+h1 {
+    color: black;
+    font-size: 45px;
+    padding-left: 50px;
+    padding-right: 20px;
+}
+
+.button-container {
+    margin: 20px;
+}
+
+.center-button {
+    padding: 15px 30px;
+    font-size: 20px;
+    background-color: #3498db;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+}
+
+.center-button:hover {
+    background-color: #2980b9;
+}
+
+img {
+    width: 250px;
+    height: 250px;
+    margin: 20px auto;
+}
+
+.countdown {
+    font-size: 40px;
+    text-align: center;
+    color: #34495e;
+}
+.icon{
+    position: absolute;
+    top: 45px;
+    left: 30px;
+    font-size: 30px;
+}
+.audio-player {
+    display: none;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.audio-title {
+    color: white;
+    margin-top: 10px;
+    font-size: 18px;
+}

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relaxing Sounds</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body {
+            transition: background-image 0.5s ease-in-out;
+            background-size: cover;
+            background-position: center center;
+            overflow: hidden;
+        }
+
+        #background-video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+        .audio-player {
+            display: none;
+            position: fixed;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+    </style>
+</head>
+<body style="background: #c2e59c;background: -webkit-linear-gradient(to right, #64b3f4, #c2e59c);background: linear-gradient(to right, #64b3f4, #c2e59c);">
+    <video id="background-video" autoplay loop muted>
+        <source id="video-source" src="" type="video/mp4">
+    </video>
+
+    <center>
+        <div class="icon">
+            <a href="./index.html" class="back-button"><i class="fa-solid fa-circle-left" ></i></a>
+        </div>
+        <h1>Relaxing Sounds</h1>
+    </center>
+    <hr>
+
+    <div class="button-container">
+        <button class="center-button" onclick="playSound('rain')">Rain</button>
+        <button class="center-button" onclick="playSound('waves')">Ocean Waves</button>
+        <button class="center-button" onclick="playSound('forest')">Forest</button>
+    </div>
+
+    <div id="rain" class="audio-player" style="display:none;">
+        <audio controls loop>
+            <source src="./img and sounds/rain-sound.mp3">
+        </audio>
+        <div class="audio-title">Rain Sound</div>
+    </div>
+
+    <div id="waves" class="audio-player" style="display:none;">
+        <audio controls loop>
+            <source src="./img and sounds/ocean-waves-sound.mp3">
+        </audio>
+        <div class="audio-title">Ocean Waves Sound</div>
+    </div>
+
+    <div id="forest" class="audio-player" style="display:none;">
+        <audio controls loop>
+            <source src="./img and sounds/forest-sound.mp3">
+        </audio>
+        <div class="audio-title">Forest Sound</div>
+    </div>
+
+    <script>
+        function playSound(sound) {
+            const rainAudio = document.getElementById('rain').querySelector('audio');
+            const wavesAudio = document.getElementById('waves').querySelector('audio');
+            const forestAudio = document.getElementById('forest').querySelector('audio');
+            
+            if (rainAudio) rainAudio.pause();
+            if (wavesAudio) wavesAudio.pause();
+            if (forestAudio) forestAudio.pause();
+            
+            document.getElementById("rain").style.display = "none";
+            document.getElementById("waves").style.display = "none";
+            document.getElementById("forest").style.display = "none";
+
+            const selectedAudio = document.getElementById(sound).querySelector('audio');
+            document.getElementById(sound).style.display = "inline-block";
+            
+            if (selectedAudio) selectedAudio.play();
+
+            const videoElement = document.getElementById('background-video');
+            const videoSource = document.getElementById('video-source');
+
+            if (sound === 'rain') {
+                videoSource.src = "./img and sounds/rain-bg.mp4";
+            } else if (sound === 'waves') {
+                videoSource.src = "./img and sounds/ocean-bg.mp4";
+            } else if (sound === 'forest') {
+                videoSource.src = "./img and sounds/forest-bg.mp4";
+            }
+
+            videoElement.load();
+        }
+    </script>
+
+</body>
+</html>

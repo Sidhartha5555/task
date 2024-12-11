@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meditation App</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .sun-background {
+      position: absolute;
+      top: 135px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: -1;
+      animation: rotate-sun 20s linear infinite;
+    }
+
+    .sun-background img {
+      width: 100%;
+      opacity: 0.8;
+    }
+    @keyframes rotate-sun {
+      0% {
+          transform: translateX(-50%) rotate(0deg);
+      }
+      100% {
+          transform: translateX(-50%) rotate(360deg);
+      }
+    }
+
+
+  </style>
+</head>
+<body style="background: #c2e59c;background: -webkit-linear-gradient(to right, #64b3f4, #c2e59c);background: linear-gradient(to right, #64b3f4, #c2e59c);">
+  
+  
+  
+  <div>
+    <center>
+      <h1 style="font-size: 45px;">Meditation App</h1>
+      <hr><br>
+    </center>
+    <div class="sun-background">
+      <img src="./img and sounds/sun-background.png">
+    </div>
+    <div class="down">
+      <div class="buttons">
+        <a href="./breathing.html"><button id="butt1">Breathing Exercises</button></a><br>
+        <a href="./relaxing.html"><button id="butt2">Relaxing Sounds</button></a><br>
+        <a href="./binaural.html"><button id="butt3">Binaural Sounds</button></a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

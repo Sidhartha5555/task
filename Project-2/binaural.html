@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Binaural Beats for Meditation</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+    <style>
+        .audio-player {
+            display: none;
+            position: fixed;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body style="background: #c2e59c;background: -webkit-linear-gradient(to right, #64b3f4, #c2e59c);background: linear-gradient(to right, #64b3f4, #c2e59c);">
+    <div class="container">
+        <center>
+            <div class="icon">
+                <a href="./index.html" class="back-button"><i class="fa-solid fa-circle-left"></i></a>
+            </div>
+            <h1>Binaural Beats Meditation</h1>
+        </center>
+        <hr>
+
+        <div class="button-container">
+            <button class="center-button" onclick="playSound('alpha')">Alpha (8-13 Hz)</button>
+            <button class="center-button" onclick="playSound('beta')">Beta (13-30 Hz)</button>
+            <button class="center-button" onclick="playSound('delta')">Delta (0.5-4 Hz)</button>
+            <button class="center-button" onclick="playSound('theta')">Theta (4-8 Hz)</button>
+        </div>
+
+        <div id="alpha" class="audio-player" style="display:none;">
+            <audio controls loop>
+                <source src="./img and sounds/alpha-waves.mp3">
+            </audio>
+            <div class="audio-title">Alpha Binaural Beat</div>
+        </div>
+
+        <div id="beta" class="audio-player" style="display:none;">
+            <audio controls loop>
+                <source src="./img and sounds/beta-waves.mp3">
+            </audio>
+            <div class="audio-title">Beta Binaural Beat</div>
+        </div>
+
+        <div id="delta" class="audio-player" style="display:none;">
+            <audio controls loop>
+                <source src="./img and sounds/delta-waves.mp3">
+            </audio>
+            <div class="audio-title">Delta Binaural Beat</div>
+        </div>
+
+        <div id="theta" class="audio-player" style="display:none;">
+            <audio controls loop>
+                <source src="./img and sounds/theta-waves.mp3">
+            </audio>
+            <div class="audio-title">Theta Binaural Beat</div>
+        </div>
+    </div>
+
+    <script>
+        function playSound(sound) {
+            const alphaAudio = document.getElementById('alpha').querySelector('audio');
+            const betaAudio = document.getElementById('beta').querySelector('audio');
+            const deltaAudio = document.getElementById('delta').querySelector('audio');
+            const thetaAudio = document.getElementById('theta').querySelector('audio');
+            
+            if (alphaAudio) alphaAudio.pause();
+            if (betaAudio) betaAudio.pause();
+            if (deltaAudio) deltaAudio.pause();
+            if (thetaAudio) thetaAudio.pause();
+
+            document.getElementById("alpha").style.display = "none";
+            document.getElementById("beta").style.display = "none";
+            document.getElementById("delta").style.display = "none";
+            document.getElementById("theta").style.display = "none";
+
+            const selectedAudio = document.getElementById(sound).querySelector('audio');
+            document.getElementById(sound).style.display = "inline-block";
+            
+            if (selectedAudio) selectedAudio.play();
+        }
+    </script>
+</body>
+</html>
