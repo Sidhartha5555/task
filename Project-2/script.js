@@ -41,7 +41,7 @@ startButton.addEventListener('click', function() {
                     if (time < 0) {
                         clearInterval(holdTimer);
                         time = 4;
-                        img.src = './img and sounds/Exhale.png';
+                        img.src = './img and sounds/exhale.png';
                         countdown.innerText = "Exhale - "+time+"s";
                         exhaleAudio.play();
                         releaseTimer = setInterval(function() {
