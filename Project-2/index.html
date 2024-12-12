@@ -6,6 +6,10 @@
   <title>Meditation App</title>
   <link rel="stylesheet" href="style.css">
   <style>
+    body{
+      border: 2px solid;
+      height: 98vh;
+    }
     .sun-background {
       position: absolute;
       top: 135px;
@@ -14,10 +18,13 @@
       z-index: -1;
       animation: rotate-sun 20s linear infinite;
     }
-
     .sun-background img {
       width: 100%;
       opacity: 0.8;
+    }
+    h1{
+      font-size: 45px;
+      transition-duration: 0.5s;
     }
     @keyframes rotate-sun {
       0% {
@@ -33,24 +40,27 @@
         height: 100%;
       }
     }
-    @media screen and (max-width:390px) {
-      .sun-background {
-      position: absolute;
-      top: 200px;
+    @media screen and (max-width:392px) {
+      h1{
+        font-size: 35px;
+        transition-duration: 0.5s;
       }
       
+    }
+    @media screen and (max-width:325px) {
+      h1{
+        font-size: 30px;
+        transition-duration: 0.5s;
+      }
     }
 
 
   </style>
 </head>
 <body style="background: #c2e59c;background: -webkit-linear-gradient(to right, #64b3f4, #c2e59c);background: linear-gradient(to right, #64b3f4, #c2e59c);">
-  
-  
-  
   <div>
     <center>
-      <h1 style="font-size: 45px;">Meditation App</h1>
+      <h1>Meditation App</h1>
       <hr><br>
     </center>
     <div class="sun-background">
